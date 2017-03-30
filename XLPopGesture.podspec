@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "XLPopGesture"
-  s.version      = "1.2"
+  s.version      = "1.3"
   s.summary      = "A custom PopGesture with AOP."
   s.description  = "A custom PopGesture with AOP. Just pod in 2 files and no need for any setups."
   s.homepage     = "https://github.com/cctomato/XLPopGesture"

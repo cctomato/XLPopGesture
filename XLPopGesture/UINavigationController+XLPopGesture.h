@@ -41,8 +41,7 @@
     
 @end
 
-@interface UINavigationController (XLFullscreenPopGesture)
-    
+@interface UINavigationController (XLPopGesture)
 /**
  *A view controller is able to control navigation bar's appearance by itself,
  *rather than a global way, checking "xl_prefersNavigationBarHidden" property.
@@ -60,4 +59,13 @@
  **/
 @property (nonatomic, strong) UIPercentDrivenInteractiveTransition *xl_interactivePopTransition;
     
+@end
+
+@interface UINavigationController (XLHiddenBlackLine)
+
+/**
+ *Default to NO, if you want to hidden the black line, Set YES
+ **/
+@property (nonatomic, assign) BOOL xl_hiddenBlackLine;
+
 @end

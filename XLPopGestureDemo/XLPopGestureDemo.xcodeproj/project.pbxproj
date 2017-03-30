@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3336C4CF1E8CA1B700631AAC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3336C4CE1E8CA1B700631AAC /* main.m */; };
+		3336C4D21E8CA1B700631AAC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3336C4D11E8CA1B700631AAC /* AppDelegate.m */; };
+		3336C4DA1E8CA1B700631AAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3336C4D91E8CA1B700631AAC /* Assets.xcassets */; };
+		3336C4DD1E8CA1B700631AAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3336C4DB1E8CA1B700631AAC /* LaunchScreen.storyboard */; };
+		3336C4E71E8CA1C100631AAC /* UINavigationController+XLPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 3336C4E61E8CA1C100631AAC /* UINavigationController+XLPopGesture.m */; };
+		3336C4EA1E8CA1E700631AAC /* XLOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3336C4E91E8CA1E700631AAC /* XLOneViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3336C4CA1E8CA1B700631AAC /* XLPopGestureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XLPopGestureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3336C4CE1E8CA1B700631AAC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3336C4D01E8CA1B700631AAC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3336C4D11E8CA1B700631AAC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3336C4D91E8CA1B700631AAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3336C4DC1E8CA1B700631AAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3336C4DE1E8CA1B700631AAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3336C4E51E8CA1C100631AAC /* UINavigationController+XLPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+XLPopGesture.h"; sourceTree = "<group>"; };
+		3336C4E61E8CA1C100631AAC /* UINavigationController+XLPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+XLPopGesture.m"; sourceTree = "<group>"; };
+		3336C4E81E8CA1E700631AAC /* XLOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLOneViewController.h; sourceTree = "<group>"; };
+		3336C4E91E8CA1E700631AAC /* XLOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLOneViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3336C4C71E8CA1B700631AAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3336C4C11E8CA1B700631AAC = {
+			isa = PBXGroup;
+			children = (
+				3336C4CC1E8CA1B700631AAC /* XLPopGestureDemo */,
+				3336C4CB1E8CA1B700631AAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3336C4CB1E8CA1B700631AAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3336C4CA1E8CA1B700631AAC /* XLPopGestureDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3336C4CC1E8CA1B700631AAC /* XLPopGestureDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3336C4E41E8CA1C100631AAC /* XLPopGesture */,
+				3336C4E81E8CA1E700631AAC /* XLOneViewController.h */,
+				3336C4E91E8CA1E700631AAC /* XLOneViewController.m */,
+				3336C4D01E8CA1B700631AAC /* AppDelegate.h */,
+				3336C4D11E8CA1B700631AAC /* AppDelegate.m */,
+				3336C4D91E8CA1B700631AAC /* Assets.xcassets */,
+				3336C4DB1E8CA1B700631AAC /* LaunchScreen.storyboard */,
+				3336C4DE1E8CA1B700631AAC /* Info.plist */,
+				3336C4CD1E8CA1B700631AAC /* Supporting Files */,
+			);
+			path = XLPopGestureDemo;
+			sourceTree = "<group>";
+		};
+		3336C4CD1E8CA1B700631AAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3336C4CE1E8CA1B700631AAC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3336C4E41E8CA1C100631AAC /* XLPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				3336C4E51E8CA1C100631AAC /* UINavigationController+XLPopGesture.h */,
+				3336C4E61E8CA1C100631AAC /* UINavigationController+XLPopGesture.m */,
+			);
+			name = XLPopGesture;
+			path = ../../XLPopGesture;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3336C4C91E8CA1B700631AAC /* XLPopGestureDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3336C4E11E8CA1B700631AAC /* Build configuration list for PBXNativeTarget "XLPopGestureDemo" */;
+			buildPhases = (
+				3336C4C61E8CA1B700631AAC /* Sources */,
+				3336C4C71E8CA1B700631AAC /* Frameworks */,
+				3336C4C81E8CA1B700631AAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XLPopGestureDemo;
+			productName = XLPopGestureDemo;
+			productReference = 3336C4CA1E8CA1B700631AAC /* XLPopGestureDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3336C4C21E8CA1B700631AAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "cai cai";
+				TargetAttributes = {
+					3336C4C91E8CA1B700631AAC = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 4836KSGVBA;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 3336C4C51E8CA1B700631AAC /* Build configuration list for PBXProject "XLPopGestureDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3336C4C11E8CA1B700631AAC;
+			productRefGroup = 3336C4CB1E8CA1B700631AAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3336C4C91E8CA1B700631AAC /* XLPopGestureDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3336C4C81E8CA1B700631AAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3336C4DD1E8CA1B700631AAC /* LaunchScreen.storyboard in Resources */,
+				3336C4DA1E8CA1B700631AAC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3336C4C61E8CA1B700631AAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3336C4D21E8CA1B700631AAC /* AppDelegate.m in Sources */,
+				3336C4EA1E8CA1E700631AAC /* XLOneViewController.m in Sources */,
+				3336C4CF1E8CA1B700631AAC /* main.m in Sources */,
+				3336C4E71E8CA1C100631AAC /* UINavigationController+XLPopGesture.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3336C4DB1E8CA1B700631AAC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3336C4DC1E8CA1B700631AAC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3336C4DF1E8CA1B700631AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3336C4E01E8CA1B700631AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3336C4E21E8CA1B700631AAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4836KSGVBA;
+				INFOPLIST_FILE = XLPopGestureDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlit.XLPopGestureDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3336C4E31E8CA1B700631AAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4836KSGVBA;
+				INFOPLIST_FILE = XLPopGestureDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xlit.XLPopGestureDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3336C4C51E8CA1B700631AAC /* Build configuration list for PBXProject "XLPopGestureDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3336C4DF1E8CA1B700631AAC /* Debug */,
+				3336C4E01E8CA1B700631AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3336C4E11E8CA1B700631AAC /* Build configuration list for PBXNativeTarget "XLPopGestureDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3336C4E21E8CA1B700631AAC /* Debug */,
+				3336C4E31E8CA1B700631AAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3336C4C21E8CA1B700631AAC /* Project object */;
+}

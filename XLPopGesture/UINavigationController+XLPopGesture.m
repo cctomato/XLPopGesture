@@ -405,4 +405,33 @@ typedef void (^XLViewControllerWillAppearInjectBlock)(UIViewController *viewCont
     objc_setAssociatedObject(self, @selector(xl_snapshot), snapshot, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
+
+
+@end
+
+@implementation UINavigationController (XLHiddenBlackLine)
+
+- (BOOL)xl_hiddenBlackLine
+{
+    return [objc_getAssociatedObject(self, _cmd) boolValue];
+}
+
+- (void)setXl_hiddenBlackLine:(BOOL)hiddenBlackLine
+{
+    if (hiddenBlackLine == YES) {
+        UIView *firstView = self.navigationBar.subviews[0];
+        for (id object in firstView.subviews) {
+            if ([object isKindOfClass:[UIImageView class]]) {
+                UIImageView *line = (UIImageView *)object;
+                line.hidden = YES;
+                break;
+            }
+        }
+    }
+    
+    objc_setAssociatedObject(self, @selector(xl_hiddenBlackLine), @(hiddenBlackLine), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+
+
 @end
