@@ -60,12 +60,3 @@
 @property (nonatomic, strong) UIPercentDrivenInteractiveTransition *xl_interactivePopTransition;
     
 @end
-
-@interface UINavigationController (XLHiddenBlackLine)
-
-/**
- *Default to NO, if you want to hidden the black line, Set YES
- **/
-@property (nonatomic, assign) BOOL xl_hiddenBlackLine;
-
-@end
