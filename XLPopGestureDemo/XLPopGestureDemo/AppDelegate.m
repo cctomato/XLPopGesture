@@ -21,7 +21,6 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     UINavigationController *rootVC = [[UINavigationController alloc] initWithRootViewController:[[XLOneViewController alloc] init]];
-    rootVC.xl_hiddenBlackLine = YES;
     self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     return YES;

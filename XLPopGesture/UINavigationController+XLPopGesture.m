@@ -242,9 +242,6 @@ typedef void (^XLViewControllerWillAppearInjectBlock)(UIViewController *viewCont
     }
     
     UIViewController *lastController = [self.viewControllers lastObject];
-    if (lastController.tabBarController) {
-        [viewController setHidesBottomBarWhenPushed:YES];
-    }
     lastController.xl_snapshot = [[UIApplication sharedApplication].keyWindow snapshotViewAfterScreenUpdates:NO];
     
     if (![self.interactivePopGestureRecognizer.view.gestureRecognizers containsObject:self.xl_popRecoginzer]) {
