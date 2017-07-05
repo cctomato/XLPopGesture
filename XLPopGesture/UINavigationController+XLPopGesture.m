@@ -90,25 +90,25 @@
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
     NSTimeInterval duration = [self transitionDuration:transitionContext];
-    
-    if (self.operation == UINavigationControllerOperationPush) {
-        [[transitionContext containerView] addSubview:fromViewController.xl_snapshot];
-        fromViewController.view.hidden = YES;
-        
-        CGRect frame = [transitionContext finalFrameForViewController:toViewController];
-        toViewController.view.frame = CGRectOffset(frame, CGRectGetWidth(frame), 0);
-        [[transitionContext containerView] addSubview:toViewController.view];
-        
-        [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
-            fromViewController.xl_snapshot.alpha = 0.0;
-            fromViewController.xl_snapshot.frame = CGRectInset(fromViewController.view.frame, 20, 20);
-            toViewController.view.frame = CGRectOffset(toViewController.view.frame, -CGRectGetWidth(toViewController.view.frame), 0);
-        } completion:^(BOOL finished) {
-            fromViewController.view.hidden = NO;
-            [fromViewController.xl_snapshot removeFromSuperview];
-            [transitionContext completeTransition:YES];
-        }];
-    } else if (self.operation == UINavigationControllerOperationPop) {
+//    if (self.operation == UINavigationControllerOperationPush) {
+//        [[transitionContext containerView] addSubview:fromViewController.xl_snapshot];
+//        fromViewController.view.hidden = YES;
+//        
+//        CGRect frame = [transitionContext finalFrameForViewController:toViewController];
+//        toViewController.view.frame = CGRectOffset(frame, CGRectGetWidth(frame), 0);
+//        [[transitionContext containerView] addSubview:toViewController.view];
+//        
+//        [UIView animateWithDuration:duration delay:0.0 options:UIViewAnimationOptionCurveEaseOut animations:^{
+//            fromViewController.xl_snapshot.alpha = 0.0;
+//            fromViewController.xl_snapshot.frame = CGRectInset(fromViewController.view.frame, 20, 20);
+//            toViewController.view.frame = CGRectOffset(toViewController.view.frame, -CGRectGetWidth(toViewController.view.frame), 0);
+//        } completion:^(BOOL finished) {
+//            fromViewController.view.hidden = NO;
+//            [fromViewController.xl_snapshot removeFromSuperview];
+//            [transitionContext completeTransition:YES];
+//        }];
+//    }
+    if (self.operation == UINavigationControllerOperationPop) {
         [UIApplication sharedApplication].keyWindow.backgroundColor = [UIColor blackColor];
 
         fromViewController.xl_snapshot.frame = fromViewController.navigationController.view.bounds;
@@ -119,8 +119,10 @@
         fromViewController.tabBarController.tabBar.hidden = YES;
         
         toViewController.xl_snapshot.alpha = 0.5;
-        toViewController.xl_snapshot.transform = CGAffineTransformMakeScale(0.95, 0.95);
-        
+        if (toViewController.navigationController.xl_prefersOpenBackEffects) {
+                    toViewController.xl_snapshot.transform = CGAffineTransformMakeScale(0.95, 0.95);
+        }
+
         UIView *toViewWrapperView = [[UIView alloc] initWithFrame:[transitionContext containerView].bounds];
         [toViewWrapperView addSubview:toViewController.view];
         toViewWrapperView.hidden = YES;
@@ -242,6 +244,9 @@ typedef void (^XLViewControllerWillAppearInjectBlock)(UIViewController *viewCont
     }
     
     UIViewController *lastController = [self.viewControllers lastObject];
+    if (lastController.tabBarController && self.xl_prefersHiddenTabBar) {
+        [viewController setHidesBottomBarWhenPushed:YES];
+    }
     lastController.xl_snapshot = [[UIApplication sharedApplication].keyWindow snapshotViewAfterScreenUpdates:NO];
     
     if (![self.interactivePopGestureRecognizer.view.gestureRecognizers containsObject:self.xl_popRecoginzer]) {
@@ -366,6 +371,34 @@ typedef void (^XLViewControllerWillAppearInjectBlock)(UIViewController *viewCont
 - (void)setXl_interactivePopTransition:(UIPercentDrivenInteractiveTransition *)interactivePopTransition
 {
     objc_setAssociatedObject(self, @selector(xl_interactivePopTransition), interactivePopTransition, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (BOOL)xl_prefersHiddenTabBar
+{
+    NSNumber *number = objc_getAssociatedObject(self, _cmd);
+    if (number) {
+        return [number boolValue];
+    }
+    return YES;
+}
+
+- (void)setXl_prefersHiddenTabBar:(BOOL)prefersHiddenTabBar
+{
+    objc_setAssociatedObject(self, @selector(xl_prefersHiddenTabBar), @(prefersHiddenTabBar), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (BOOL)xl_prefersOpenBackEffects
+{
+    NSNumber *number = objc_getAssociatedObject(self, _cmd);
+    if (number) {
+        return [number boolValue];
+    }
+    return YES;
+}
+
+- (void)setXl_prefersOpenBackEffects:(BOOL)prefersOpenBackEffects
+{
+    objc_setAssociatedObject(self, @selector(xl_prefersOpenBackEffects), @(prefersOpenBackEffects), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

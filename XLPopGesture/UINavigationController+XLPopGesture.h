@@ -23,22 +23,19 @@
 #import <UIKit/UIKit.h>
 
 @interface UIViewController (XLPopGesture)
-    
 /**
  *A snapshot view based on the contents of the current view
  **/
 @property (nonatomic, strong) UIView *xl_snapshot;
-    
 /**
  *Default to NO, if you want to hidden navgationBar, Set YES
 **/
 @property (nonatomic, assign) BOOL xl_prefersNavigationBarHidden;
-    
 /**
  *Default to NO, if you want to disable the pop gesture, Set YES
  **/
 @property (nonatomic, assign) BOOL xl_prefersDisablePop;
-    
+
 @end
 
 @interface UINavigationController (XLPopGesture)
@@ -48,15 +45,20 @@
  *Default to YES, disable it if you don't want so.
  **/
 @property (nonatomic, assign) BOOL xl_viewControllerBasedNavigationBarAppearanceEnabled;
-    
 /**
  *The gesture recognizer that actually handles interactive pop.
  **/
 @property (nonatomic, strong, readonly) UIPanGestureRecognizer *xl_popRecoginzer;
-    
+/**
+ *Default to YES, if you do not want to hidden tabBar, set NO
+ **/
+@property (nonatomic, assign) BOOL xl_prefersHiddenTabBar;
+/**
+ *Default to YES, if you do not want to close the effects, set NO
+ **/
+@property (nonatomic, assign) BOOL xl_prefersOpenBackEffects;
 /**
  *The gesture percentage
  **/
 @property (nonatomic, strong) UIPercentDrivenInteractiveTransition *xl_interactivePopTransition;
-    
 @end

@@ -20,8 +20,38 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    UINavigationController *rootVC = [[UINavigationController alloc] initWithRootViewController:[[XLOneViewController alloc] init]];
-    self.window.rootViewController = rootVC;
+    
+    UITabBarController *tabBar = [[UITabBarController alloc] init];
+    
+    UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:[[XLOneViewController alloc] init]];
+    nav1.tabBarItem.title = @"首页1";
+    nav1.tabBarItem.image = [UIImage imageNamed:@"tabbar_selected"];
+    nav1.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [tabBar addChildViewController:nav1];
+    
+    UINavigationController *nav2 = [[UINavigationController alloc] initWithRootViewController:[[XLOneViewController alloc] init]];
+    nav2.xl_prefersHiddenTabBar = NO;
+    nav2.tabBarItem.title = @"首页2";
+    nav2.tabBarItem.image = [UIImage imageNamed:@"tabbar_selected"];
+    nav2.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [tabBar addChildViewController:nav2];
+    
+    UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:[[XLOneViewController alloc] init]];
+    nav3.xl_prefersOpenBackEffects = NO;
+    nav3.tabBarItem.title = @"首页3";
+    nav3.tabBarItem.image = [UIImage imageNamed:@"tabbar_selected"];
+    nav3.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [tabBar addChildViewController:nav3];
+    
+    UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:[[XLOneViewController alloc] init]];
+    nav4.xl_prefersHiddenTabBar = NO;
+    nav4.xl_prefersOpenBackEffects = NO;
+    nav4.tabBarItem.title = @"首页4";
+    nav4.tabBarItem.image = [UIImage imageNamed:@"tabbar_selected"];
+    nav4.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    [tabBar addChildViewController:nav4];
+    
+    self.window.rootViewController = tabBar;
     [self.window makeKeyAndVisible];
     return YES;
 }
