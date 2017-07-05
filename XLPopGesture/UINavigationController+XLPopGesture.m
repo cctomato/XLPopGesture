@@ -119,7 +119,7 @@
         fromViewController.tabBarController.tabBar.hidden = YES;
         
         toViewController.xl_snapshot.alpha = 0.5;
-        if (toViewController.navigationController.xl_prefersOpenBackEffects) {
+        if (toViewController.navigationController.xl_prefersOpenPopEffects) {
                     toViewController.xl_snapshot.transform = CGAffineTransformMakeScale(0.95, 0.95);
         }
 
@@ -387,7 +387,7 @@ typedef void (^XLViewControllerWillAppearInjectBlock)(UIViewController *viewCont
     objc_setAssociatedObject(self, @selector(xl_prefersHiddenTabBar), @(prefersHiddenTabBar), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (BOOL)xl_prefersOpenBackEffects
+- (BOOL)xl_prefersOpenPopEffects
 {
     NSNumber *number = objc_getAssociatedObject(self, _cmd);
     if (number) {
@@ -396,9 +396,9 @@ typedef void (^XLViewControllerWillAppearInjectBlock)(UIViewController *viewCont
     return YES;
 }
 
-- (void)setXl_prefersOpenBackEffects:(BOOL)prefersOpenBackEffects
+- (void)setXl_prefersOpenPopEffects:(BOOL)prefersOpenPopEffects
 {
-    objc_setAssociatedObject(self, @selector(xl_prefersOpenBackEffects), @(prefersOpenBackEffects), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(xl_prefersOpenPopEffects), @(prefersOpenPopEffects), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

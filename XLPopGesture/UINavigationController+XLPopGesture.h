@@ -54,9 +54,9 @@
  **/
 @property (nonatomic, assign) BOOL xl_prefersHiddenTabBar;
 /**
- *Default to YES, if you do not want to close the effects, set NO
+ *Default to YES, if you do not want to close the Pop effects, set NO
  **/
-@property (nonatomic, assign) BOOL xl_prefersOpenBackEffects;
+@property (nonatomic, assign) BOOL xl_prefersOpenPopEffects;
 /**
  *The gesture percentage
  **/

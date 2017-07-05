@@ -37,7 +37,7 @@
     [tabBar addChildViewController:nav2];
     
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:[[XLOneViewController alloc] init]];
-    nav3.xl_prefersOpenBackEffects = NO;
+    nav3.xl_prefersOpenPopEffects = NO;
     nav3.tabBarItem.title = @"首页3";
     nav3.tabBarItem.image = [UIImage imageNamed:@"tabbar_selected"];
     nav3.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
@@ -45,7 +45,7 @@
     
     UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:[[XLOneViewController alloc] init]];
     nav4.xl_prefersHiddenTabBar = NO;
-    nav4.xl_prefersOpenBackEffects = NO;
+    nav4.xl_prefersOpenPopEffects = NO;
     nav4.tabBarItem.title = @"首页4";
     nav4.tabBarItem.image = [UIImage imageNamed:@"tabbar_selected"];
     nav4.tabBarItem.selectedImage = [[UIImage imageNamed:@"tabbar"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];

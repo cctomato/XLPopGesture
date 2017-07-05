@@ -9,29 +9,35 @@ Design ideas come from [FDFullscreenPopGesture](https://github.com/forkingdog/FD
 
 Thanks for sharing.
 
-#Usage
+# Usage
 
 AOP, just add 2 files and no need for any setups, all navigation controllers will be able to use fullscreen pop gesture automatically.
 
 To disable this pop gesture of a view controller:
 
 ```objc
-- (BOOL)xl_prefersDisablePop
-{
-    return YES;
-}
+viewController.xl_prefersDisablePop = YES;
 ```
 
 To hidden the navigationBar of a view controller:
 
 ```objc
-- (BOOL)xl_prefersNavigationBarHidden
-{
-    return YES;
-}
+viewController.xl_prefersNavigationBarHidden = YES;
 ```
 
-#Installation
+To close the Pop effects of a navigationController:
+
+```objc
+navigationController.xl_prefersOpenPopEffects = NO;
+```
+
+TabbarItem will be hidden when push ViewController,if you do not want this:
+
+```objc
+navigationController.xl_prefersHiddenTabBar = NO;
+```
+
+# Installation
 
 Use CocoaPods
 
